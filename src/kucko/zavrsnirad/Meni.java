@@ -6,19 +6,21 @@
 package kucko.zavrsnirad;
 
 
+import kucko.zavrsnirad.model.Mjesto;
 import kucko.zavrsnirad.pomocno.HibUtil;
 import kucko.zavrsnirad.view.Menu;
+import kucko.zavrsnirad.UcitajMjesta;
 
-/**
- *
- * @author Filip
- */
+
 public class Meni {
+    
+    
     
         public static void main(String[] args) {
         new Menu().setVisible(true);
         HibUtil.getSession();
         
+       
     }
     
 }

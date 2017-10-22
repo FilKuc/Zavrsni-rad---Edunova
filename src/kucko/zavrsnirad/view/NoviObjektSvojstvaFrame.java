@@ -19,6 +19,7 @@ public class NoviObjektSvojstvaFrame extends Forma<Svojstva> {
     
     public NoviObjektSvojstvaFrame() {
         initComponents();
+        setTitle("Novi Objekt");
     }
     
     @Override
@@ -106,7 +107,7 @@ public class NoviObjektSvojstvaFrame extends Forma<Svojstva> {
                             .addComponent(boxTV)
                             .addComponent(boxBalkon)
                             .addComponent(boxWifi))))
-                .addContainerGap(250, Short.MAX_VALUE))
+                .addContainerGap(52, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -141,8 +142,6 @@ public class NoviObjektSvojstvaFrame extends Forma<Svojstva> {
                 .addComponent(btnNastavak)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-
-        boxHotel.getAccessibleContext().setAccessibleName("");
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

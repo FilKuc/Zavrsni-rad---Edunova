@@ -8,6 +8,8 @@ package kucko.zavrsnirad.view;
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.BorderFactory;
+import kucko.zavrsnirad.pomocno.Boje;
 
 /**
  *
@@ -18,6 +20,8 @@ public class Menu extends javax.swing.JFrame {
     
     public Menu() {
         initComponents();
+        getContentPane().setBackground(Boje.farbe2);
+        setTitle("Izbornik");
     }
 
     
@@ -29,7 +33,7 @@ public class Menu extends javax.swing.JFrame {
         btnIznajmljivac = new javax.swing.JButton();
         btnObjekt = new javax.swing.JButton();
         lblGitHub = new javax.swing.JLabel();
-        btnRezervacija = new javax.swing.JButton();
+        btnEraDijagram = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -61,7 +65,12 @@ public class Menu extends javax.swing.JFrame {
             }
         });
 
-        btnRezervacija.setText("Rezervacija");
+        btnEraDijagram.setText("ERA Dijagram");
+        btnEraDijagram.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEraDijagramActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -77,8 +86,8 @@ public class Menu extends javax.swing.JFrame {
                     .addComponent(btnKorisnik, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btnIznajmljivac, javax.swing.GroupLayout.DEFAULT_SIZE, 110, Short.MAX_VALUE)
                     .addComponent(btnObjekt, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnRezervacija, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(252, Short.MAX_VALUE))
+                    .addComponent(btnEraDijagram, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(94, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -90,7 +99,7 @@ public class Menu extends javax.swing.JFrame {
                 .addGap(31, 31, 31)
                 .addComponent(btnObjekt)
                 .addGap(30, 30, 30)
-                .addComponent(btnRezervacija)
+                .addComponent(btnEraDijagram)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 42, Short.MAX_VALUE)
                 .addComponent(lblGitHub)
                 .addGap(22, 22, 22))
@@ -106,7 +115,7 @@ public class Menu extends javax.swing.JFrame {
 
     private void lblGitHubMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblGitHubMouseClicked
         try {
-            Runtime.getRuntime().exec("cmd /c start https://github.com/FilKuc ");
+            Runtime.getRuntime().exec("cmd /c start https://github.com/FilKuc/Zavrsni-rad---Edunova ");
         } catch (IOException ex) {
             Logger.getLogger(Menu.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -122,12 +131,17 @@ public class Menu extends javax.swing.JFrame {
        super.dispose();
     }//GEN-LAST:event_btnObjektActionPerformed
 
+    private void btnEraDijagramActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEraDijagramActionPerformed
+        new EraDijagramFrame().setVisible(true);
+        super.dispose();
+    }//GEN-LAST:event_btnEraDijagramActionPerformed
+
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnEraDijagram;
     private javax.swing.JButton btnIznajmljivac;
     private javax.swing.JButton btnKorisnik;
     private javax.swing.JButton btnObjekt;
-    private javax.swing.JButton btnRezervacija;
     private javax.swing.JLabel lblGitHub;
     // End of variables declaration//GEN-END:variables
 }

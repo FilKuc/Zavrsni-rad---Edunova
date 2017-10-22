@@ -34,9 +34,9 @@
                   <Component id="btnKorisnik" max="32767" attributes="0"/>
                   <Component id="btnIznajmljivac" pref="110" max="32767" attributes="0"/>
                   <Component id="btnObjekt" max="32767" attributes="0"/>
-                  <Component id="btnRezervacija" max="32767" attributes="0"/>
+                  <Component id="btnEraDijagram" max="32767" attributes="0"/>
               </Group>
-              <EmptySpace pref="252" max="32767" attributes="0"/>
+              <EmptySpace pref="94" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -50,7 +50,7 @@
               <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
               <Component id="btnObjekt" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
-              <Component id="btnRezervacija" min="-2" max="-2" attributes="0"/>
+              <Component id="btnEraDijagram" min="-2" max="-2" attributes="0"/>
               <EmptySpace pref="42" max="32767" attributes="0"/>
               <Component id="lblGitHub" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
@@ -91,10 +91,13 @@
         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="lblGitHubMouseClicked"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="btnRezervacija">
+    <Component class="javax.swing.JButton" name="btnEraDijagram">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Rezervacija"/>
+        <Property name="text" type="java.lang.String" value="ERA Dijagram"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnEraDijagramActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>

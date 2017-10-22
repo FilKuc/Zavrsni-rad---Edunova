@@ -23,6 +23,8 @@ public class Svojstva extends Entitet implements Serializable{
     private boolean balkon;
     private boolean tvUredaj;
     private boolean wifi;
+    
+    
 
     public boolean isHotel() {
         return hotel;

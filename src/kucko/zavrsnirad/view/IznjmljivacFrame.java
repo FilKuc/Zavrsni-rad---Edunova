@@ -24,6 +24,7 @@ public class IznjmljivacFrame extends Forma<Iznajmljivac> {
         initComponents();
         obrada = new HibObrada();
         ucitaj();
+        setTitle("Iznajmljivac");
     }
     
     @Override

@@ -25,10 +25,12 @@ public class Objekt extends Entitet implements Serializable {
     private Iznajmljivac iznajmljivac;
     @ManyToOne
     private Svojstva svojstva;
+    @ManyToOne
+    private Mjesto mjesto;
+    @ManyToOne
+    private Rezervacija rezervacija;
 
     private String naziv;
-    private double sirina;
-    private double duzina;
 
     public String getNaziv() {
         return naziv;
@@ -36,22 +38,6 @@ public class Objekt extends Entitet implements Serializable {
 
     public void setNaziv(String naziv) {
         this.naziv = naziv;
-    }
-
-    public double getSirina() {
-        return sirina;
-    }
-
-    public void setSirina(double sirina) {
-        this.sirina = sirina;
-    }
-
-    public double getDuzina() {
-        return duzina;
-    }
-
-    public void setDuzina(double duzina) {
-        this.duzina = duzina;
     }
 
     @Transient
@@ -65,8 +51,49 @@ public class Objekt extends Entitet implements Serializable {
         this.slike = slike;
     }
 
+    @Override
     public String toString() {
         return getNaziv();
+    }
+
+    public Mjesto getMjesto() {
+        return mjesto;
+    }
+
+    public void setMjesto(Mjesto mjesto) {
+        this.mjesto = mjesto;
+    }
+
+    public Korisnik getKorisnik() {
+        return korisnik;
+    }
+
+    public void setKorisnik(Korisnik korisnik) {
+        this.korisnik = korisnik;
+    }
+
+    public Iznajmljivac getIznajmljivac() {
+        return iznajmljivac;
+    }
+
+    public void setIznajmljivac(Iznajmljivac iznajmljivac) {
+        this.iznajmljivac = iznajmljivac;
+    }
+
+    public Svojstva getSvojstva() {
+        return svojstva;
+    }
+
+    public void setSvojstva(Svojstva svojstva) {
+        this.svojstva = svojstva;
+    }
+
+    public Rezervacija getRezervacija() {
+        return rezervacija;
+    }
+
+    public void setRezervacija(Rezervacija rezervacija) {
+        this.rezervacija = rezervacija;
     }
 
 }

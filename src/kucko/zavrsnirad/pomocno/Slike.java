@@ -35,7 +35,8 @@ public class Slike {
     
     
     public static BufferedImage dohvatiSliku() {
-    JFileChooser fileChooser = dohvatiPutanju("","Slikovna datoteka","png","Odaberite datoteku");
+        
+    JFileChooser fileChooser = dohvatiPutanju("","Slikovna datoteka","jpg","Odaberite datoteku");
         int userSelection = fileChooser.showSaveDialog(null);
         if (userSelection == JFileChooser.APPROVE_OPTION) {
             try {

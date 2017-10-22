@@ -6,7 +6,9 @@
 package kucko.zavrsnirad.model;
 
 import java.io.Serializable;
+import java.util.List;
 import javax.persistence.Entity;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 /**
@@ -17,24 +19,20 @@ import javax.persistence.Table;
 @Table
 public class Mjesto extends Entitet implements Serializable{
     
-    private String naselje;
-    private String opcina;
+    private String adresa;
     private String zupanija;
+    private String mjesto;
+   
 
-    public String getNaselje() {
-        return naselje;
+    @OneToMany
+    private List<Objekt> objekti;
+
+    public String getAdresa() {
+        return adresa;
     }
 
-    public void setNaselje(String naselje) {
-        this.naselje = naselje;
-    }
-
-    public String getOpcina() {
-        return opcina;
-    }
-
-    public void setOpcina(String opcina) {
-        this.opcina = opcina;
+    public void setAdresa(String adresa) {
+        this.adresa = adresa;
     }
 
     public String getZupanija() {
@@ -44,6 +42,23 @@ public class Mjesto extends Entitet implements Serializable{
     public void setZupanija(String zupanija) {
         this.zupanija = zupanija;
     }
+
+    public String getMjesto() {
+        return mjesto;
+    }
+
+    public void setMjesto(String mjesto) {
+        this.mjesto = mjesto;
+    }
+
+    public List<Objekt> getObjekti() {
+        return objekti;
+    }
+
+    public void setObjekti(List<Objekt> objekti) {
+        this.objekti = objekti;
+    }
+    
     
     
     

@@ -24,6 +24,7 @@ public class KorisnikFrame extends Forma<Korisnik> {
         initComponents();
         obrada = new HibObrada();
         ucitaj();
+        setTitle("Korisnik");
     }
 
    @Override

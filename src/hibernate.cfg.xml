@@ -39,6 +39,7 @@
     <mapping class="kucko.zavrsnirad.model.Mjesto" />
     <mapping class="kucko.zavrsnirad.model.Objekt" />
     <mapping class="kucko.zavrsnirad.model.Svojstva" />
+    <mapping class="kucko.zavrsnirad.model.Rezervacija" />
     
 </session-factory>
 </hibernate-configuration>

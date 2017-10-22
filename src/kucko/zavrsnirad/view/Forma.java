@@ -8,12 +8,18 @@ package kucko.zavrsnirad.view;
 import javax.swing.JFrame;
 import kucko.zavrsnirad.controller.HibObrada;
 import kucko.zavrsnirad.model.Entitet;
+import kucko.zavrsnirad.pomocno.Boje;
 
 /**
  *
  * @author Filip
  */
 public abstract class Forma<T extends Entitet> extends JFrame{
+    
+    Forma(){
+    
+    getContentPane().setBackground(Boje.farbe2);
+    }
     
     protected abstract void ucitaj();
     
